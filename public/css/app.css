@@ -10987,3 +10987,131 @@ nav .nav-link {
   color: #fff;
 }
 
+#main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#side-bar {
+  width: 280px;
+  background: #3C3F72;
+}
+
+#dashboard {
+  background: #F8F9FE;
+  width: 100%;
+}
+
+#dashboard-nav {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #7476A0;
+}
+
+#nav-container {
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+}
+
+#nav-container > div {
+  display: inline;
+}
+
+#dashboard-search {
+  float: left;
+}
+
+#dashboard-options {
+  float: right;
+}
+
+.dash-option {
+  display: inline;
+  margin: 0px 15px 0 15px;
+  cursor: pointer;
+}
+
+#dash-user-icon {
+  width: 30px;
+  height: 30px;
+}
+
+#dash-user-name {
+  display: inline;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+.dash-drop-cont {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  display: inline;
+}
+
+@-webkit-keyframes show-dash-option {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes show-dash-option {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.dash-drop {
+  position: absolute;
+  display: inline;
+  right: -5px;
+  top: 45px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 150px;
+  background: #fff;
+  display: none;
+  border-radius: 4px;
+  cursor: default;
+  box-shadow: -1px 2px 25px -2px #7476a0;
+}
+
+.show-dash-option {
+  display: block !important;
+  -webkit-animation-name: show-dash-option;
+          animation-name: show-dash-option;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+.dash-drop-op-list-item form {
+  display: inline;
+}
+
+.dash-drop-op-list-item button {
+  border: 0;
+  background: #fff;
+  display: inline;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.dash-drop-op-list-item {
+  cursor: pointer;
+  padding: 5px;
+}
+

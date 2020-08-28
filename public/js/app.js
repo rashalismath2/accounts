@@ -37266,6 +37266,22 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var dashuser = document.getElementById("dash-op-user");
+dashuser.addEventListener("click", function () {
+  var btn = document.querySelector(".dash-op-user");
+  var found = false;
+  btn.classList.forEach(function (e) {
+    if (e == "show-dash-option") {
+      btn.classList.remove("show-dash-option");
+      found = true;
+    }
+  });
+
+  if (!found) {
+    btn.classList.add("show-dash-option");
+  }
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

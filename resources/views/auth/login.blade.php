@@ -14,7 +14,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"><span class="oi oi-envelope-closed"></span></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
+                    <input name="email" type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
                           
                     @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"><span class="oi oi-key"></span></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Password" aria-label="email" aria-describedby="basic-addon1">
+                    <input name="password" type="password" class="form-control" placeholder="Password" aria-label="email" aria-describedby="basic-addon1">
                           
                     @error('password')
                         <span class="invalid-feedback" role="alert">
