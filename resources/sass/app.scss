@@ -1,0 +1,85 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html{
+    height: 100vh;
+}
+body{
+    height: 100%;
+}
+
+.navbar-brand{
+    color: #7476A0 !important;
+    font-weight: bold;
+}
+nav .nav-link{
+    font-weight: bold;
+    color: #7476A0 !important;
+}
+
+#app{
+    background: url("/Images/background.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+#login-container{
+    width: 450px;
+    margin: auto;
+}
+#login-logo {
+    height: 120px;
+    margin-bottom: 40px;
+}
+#login-logo img{
+    width: 100%;
+    height: 100%;
+}
+.login-input{
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+#login-form{
+    padding: 45px;
+    background: #7476A0;
+    border-radius: 10px;
+}
+
+#login-form>p{
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#login-remember>p{
+    display: inline;
+    color: #fff;
+    margin-left: 5px;
+}
+#login-remember>input{
+    display: inline;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+#login-submit >button{
+    border: 0;
+    background: #6DA252;
+    color: #fff;
+    height: 35px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+#login-submit >a{
+    float: right;
+    color:#fff;
+}
