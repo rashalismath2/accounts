@@ -8,7 +8,17 @@
         </div>
         <div id="new-items-desc-cont">
             <div id="new-items-inputs">
-                <form action="{{route('save_item')}}" method="post">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                    
+                <form action="{{route('save_item')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="new-item-item" id="new-items-name">
                         <p>Name<span class="new-items-required-fields">*</span></p>
@@ -49,8 +59,8 @@
                         <p>Picture</p>
                         <div class="input-group ">
                             <div class="custom-file">
-                            <input type="file" accept="image/*" name="image" class="custom-file-input" id="inputGroupFile02">
-                            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                <input type="file" accept="image/*" name="image" class="custom-file-input" id="inputGroupFile02">
+                                <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                             </div>
                         </div>
                     </dvi>
