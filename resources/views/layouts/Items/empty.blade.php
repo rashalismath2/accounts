@@ -1,6 +1,6 @@
 <div id="emp-items-desc-cont">
     <div id="emp-items-desc-img">
-        
+        <img src="{{asset('Images/items.png')}}" alt="" srcset="">
     </div>
     <div id="emp-items-desc-desc">
         <p>Items can be products or services. 
