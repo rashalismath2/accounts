@@ -10,7 +10,7 @@
         </p>
         <div id="emp-items-desc-desc-button">
             <span class="oi oi-plus"></span>
-            <button>Create Item</button>
+            <button><a href="{{route('create_item')}}">Create Item</a></button>
         </div>
         
     </div>

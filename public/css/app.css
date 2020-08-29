@@ -11228,6 +11228,11 @@ nav .nav-link {
   color: black;
 }
 
+.emp-items-head-op-buttons a {
+  text-decoration: none;
+  color: white;
+}
+
 .emp-items-head-op-buttons:first-child button {
   border: 0;
   background: inherit;
@@ -11269,10 +11274,101 @@ nav .nav-link {
   color: white;
 }
 
+#emp-items-desc-desc-button a {
+  text-decoration: none;
+  color: white;
+}
+
 #emp-items-desc-desc-button button {
   border: 0;
   background: inherit;
   font-weight: bold;
+  color: white;
+}
+
+#new-items-head-cont > p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  display: inline;
+  font-weight: bold;
+}
+
+#new-items-desc-cont {
+  margin-top: 10px;
+  background: white;
+  border-radius: 6px;
+}
+
+#new-items-inputs {
+  padding: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#new-items-inputs p {
+  margin-bottom: 0.5rem;
+}
+
+.new-items-required-fields {
+  color: red;
+}
+
+.new-item-item {
+  margin-bottom: 15px;
+}
+
+#new-items-sale-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-items-sale-price > div {
+  width: 48%;
+}
+
+#new-items-sale-image .input-group {
+  width: 48%;
+}
+
+#new-items-inputs hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#new-items-submits {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#new-items-submits > div {
+  margin-left: 15px;
+}
+
+#new-item-cancel {
+  background: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#new-item-cancel button {
+  border: none;
+  background: inherit;
+}
+
+#new-item-submit {
+  background: #6DA252;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#new-item-submit button {
+  background: inherit;
+  border: none;
   color: white;
 }
 

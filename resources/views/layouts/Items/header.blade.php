@@ -3,7 +3,7 @@
     <div id="emp-items-head-options-cont">
         <div class="emp-items-head-op-buttons">
             <span class="oi oi-plus"></span>
-            <button>Add new</button>
+            <button><a href="{{route('create_item')}}">Add new</a></button>
         </div>
         <div class="emp-items-head-op-buttons">
             <span class="oi oi-data-transfer-upload"></span>
