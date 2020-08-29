@@ -193,3 +193,48 @@ nav .nav-link{
     cursor: pointer;
     padding: 5px
 }
+
+// Sidebar
+#sidebar-cont{
+    padding: 25px;
+}
+#company-name-cont{
+    height: 35px;
+    cursor: pointer;
+}
+#company-name-cont>img{
+    height: 30px;
+}
+#company-name-cont>p{
+    display: inline;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.font-white{
+    color:white;
+}
+
+#sidebar-items-cont{
+    margin-top: 25px;
+}
+
+#sidebar-items-cont ul{
+    padding: 0 0 0 15px;
+    list-style: none;
+}
+#sidebar-items-cont ul li{
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+#sidebar-items-cont ul a:hover{
+    text-decoration: none;
+}
+#sidebar-items-cont ul li p{
+    display: inline;
+    margin-left: 15px;
+    color: white;
+}

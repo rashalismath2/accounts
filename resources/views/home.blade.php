@@ -22,7 +22,9 @@
 </head>
 <body>
     <div id="main">
-        <section id="side-bar">side bar</section>
+        <section id="side-bar">
+            @include('layouts.sidebar')
+        </section>
         <section id="dashboard">
             @include('layouts.nav')
             @yield('dashboard-content')
