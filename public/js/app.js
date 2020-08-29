@@ -37264,7 +37264,8 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // clicking on nav user button
+
 
 var dashuser = document.getElementById("dash-op-user");
 dashuser.addEventListener("click", function () {
@@ -37280,7 +37281,26 @@ dashuser.addEventListener("click", function () {
   if (!found) {
     btn.classList.add("show-dash-option");
   }
-});
+}); // clicking on items records actions span
+
+var action = document.querySelector(".items-records-action");
+
+if (action) {
+  action.addEventListener("click", function () {
+    var btn = document.querySelector(".items-actions");
+    var found = false;
+    btn.classList.forEach(function (e) {
+      if (e == "show-dash-option") {
+        btn.classList.remove("show-dash-option");
+        found = true;
+      }
+    });
+
+    if (!found) {
+      btn.classList.add("show-dash-option");
+    }
+  });
+}
 
 /***/ }),
 

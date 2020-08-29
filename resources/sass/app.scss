@@ -168,6 +168,7 @@ nav .nav-link{
     display: none;
     border-radius: 4px;
     cursor: default;
+    z-index:5;
 
     -webkit-box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
     -moz-box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
@@ -431,4 +432,52 @@ box-shadow: -4px 9px 23px -11px rgba(0,0,0,0.53);
     background: inherit;
     border: none;
     color: white;
+}
+
+// No empty items
+
+#noempty-items{
+    margin-top: 10px;
+    background: white;
+    border-radius: 6px;
+
+}
+
+.item-records-image{
+    height:40px;
+}
+
+section#items-results-table p,.items-records-action {
+    margin: 0;
+    padding-top: 10px;
+}
+.items-records-name{
+    text-transform: capitalize;
+    display: inline;
+    margin-left: 10px !important;
+}
+
+
+span.items-records-action.oi.oi-ellipses:hover {
+    font-size: 18px;
+
+}
+.items-action-row{
+    position: relative;
+}
+.item-action-drop{
+    position: absolute;
+    top: 45px;
+    right: 150px;
+    width: fit-content;
+    min-width: 150px;
+    background: #fff;
+    display: none;
+    border-radius: 4px;
+    cursor: default;
+    z-index:5;
+
+    -webkit-box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
+    -moz-box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
+    box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
 }
