@@ -213,6 +213,7 @@ nav .nav-link{
     text-transform: capitalize;
 }
 
+
 .font-white{
     color:white;
 }
@@ -230,6 +231,16 @@ nav .nav-link{
     cursor: pointer;
     margin-bottom: 15px;
 }
+.active{
+    background: #F6F9FC;
+    border-radius: 3px;
+    padding: 5px;
+}
+.active span,.active p{
+    color: black !important;    
+}
+
+
 #sidebar-items-cont ul a:hover{
     text-decoration: none;
 }
@@ -237,4 +248,9 @@ nav .nav-link{
     display: inline;
     margin-left: 15px;
     color: white;
+}
+
+
+#items-cont{
+    padding: 25px;
 }

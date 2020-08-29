@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('dashboard-content')
-    <div>
+    <div id="dashboard-cont">
         <h1>Dashboard</h1>
 
     </div>

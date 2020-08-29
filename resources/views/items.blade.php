@@ -1,8 +1,12 @@
 @extends('home')
 
 @section('dashboard-content')
-    <div>
-        <h1>Items</h1>
-
+    
+    <div id="items-cont">
+        @include('layouts.Items.header')
+        @include('layouts.Items.empty')
+       
     </div>
+
+
 @endsection
