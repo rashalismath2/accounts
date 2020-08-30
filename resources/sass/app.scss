@@ -98,6 +98,7 @@ nav .nav-link{
 }
 #side-bar{
     width: 280px;
+    height: fit-content;
     background: #3C3F72;
 }
 #dashboard{
@@ -215,6 +216,46 @@ nav .nav-link{
     text-transform: capitalize;
 }
 
+@keyframes show-sidebar-hang-items{
+    from{
+        transform:scaleY(0.1)
+    }
+    to{
+        transform:scaleY(1)
+    }
+}
+
+
+.show-hangin-items{
+    display: block !important;
+    animation-name: show-sidebar-hang-items;
+    animation-duration: 0.3s;
+}
+
+
+.sidebar-hang-items{
+    display: none;
+    cursor: default;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+.sidebar-hang-items a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.sidebar-hang-items p{
+    margin:0 0 5px 0;
+    color: white;
+}
+.side-sel{
+    font-weight: bold;
+}
+
+
+
+
+
 
 .font-white{
     color:white;
@@ -249,6 +290,7 @@ nav .nav-link{
 #sidebar-items-cont ul li p{
     display: inline;
     margin-left: 15px;
+    margin-right: 15px;
     color: white;
 }
 
@@ -480,4 +522,18 @@ span.items-records-action.oi.oi-ellipses:hover {
     -webkit-box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
     -moz-box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
     box-shadow: -1px 2px 25px -2px rgba(116,118,160,1);
+}
+
+
+// Invoice
+
+.new-item-inline{
+    display: flex;
+    justify-content: space-between;
+}
+.new-item-inline>div{
+    width:48%;
+}
+.new-item-inline .input-group{
+
 }

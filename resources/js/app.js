@@ -34,3 +34,24 @@ if(action){
         }
     })
 }
+
+// clicking on sales button
+
+var sales=document.getElementById("sidebar-sales-btn");
+sales.addEventListener("click",()=>{
+    const btn=document.getElementById("sidebar-sales-items")    
+        var found=false;
+        btn.classList.forEach(e=>{
+            if(e=="show-hangin-items"){
+                btn.classList.remove("show-hangin-items")
+                found=true;
+            }
+        })
+        if(!found){
+            btn.classList.add("show-hangin-items")
+        }
+})
+
+
+
+

@@ -37300,7 +37300,24 @@ if (action) {
       btn.classList.add("show-dash-option");
     }
   });
-}
+} // clicking on sales button
+
+
+var sales = document.getElementById("sidebar-sales-btn");
+sales.addEventListener("click", function () {
+  var btn = document.getElementById("sidebar-sales-items");
+  var found = false;
+  btn.classList.forEach(function (e) {
+    if (e == "show-hangin-items") {
+      btn.classList.remove("show-hangin-items");
+      found = true;
+    }
+  });
+
+  if (!found) {
+    btn.classList.add("show-hangin-items");
+  }
+});
 
 /***/ }),
 
