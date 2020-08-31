@@ -15,12 +15,12 @@
         <td colspan="4"></td>
       </tr>
       <tr>
-        <th class="text-right" colspan="4">Subtotal</th>
-        <td >$0.00</td>
+        <th  class="text-right" colspan="4">Subtotal</th>
+        <td id="invoice_sub_total" >$0.00</td>
       </tr>
       <tr>
-        <th class="text-right" colspan="4">Total</th>
-        <td >$0.00</td>
+        <th  class="text-right" colspan="4">Total</th>
+        <td id="invoice_total">$0.00</td>
       </tr>
     </tbody>
     <script src="{{asset('js/invoices/index.js')}}"></script>

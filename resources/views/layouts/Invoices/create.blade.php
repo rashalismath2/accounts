@@ -8,15 +8,7 @@
         </div>
         <div id="new-items-desc-cont">
             <div id="new-items-inputs">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                @include('layouts.error')
                     
                 <form action="{{route('save_invoice_item')}}" method="post" enctype="multipart/form-data">
                     @csrf
@@ -27,7 +19,11 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text oi oi-person"></span>
                                 </div>
-                                <input name="customer" type="text" class="form-control" placeholder="Customer" required aria-label="saleprice" aria-describedby="basic-addon1">
+                                <select name="customer_id" class="form-control custom-select" id="inputGroupSelect03">
+                                    @foreach ($data["customers"] as $cus)
+                                        <option >{{$cus->name}}</option>
+                                    @endforeach
+                                  </select>
                             </div>
                         </div>
                         <div>
@@ -36,7 +32,11 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text oi oi-dollar"></span>
                                 </div>
-                                <input name="currency" type="text" class="form-control" placeholder="Currency" required aria-label="purchaseprice" aria-describedby="basic-addon1">
+                                <select name="currency_id" class="form-control custom-select" id="inputGroupSelect03">
+                                    @foreach ($data["currencies"] as $cur)
+                                        <option >{{$cur->name}}</option>
+                                    @endforeach
+                                  </select>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text oi oi-file"></span>
                                 </div>
-                                <input name="invoice_number" type="text" class="form-control" placeholder="INV-00002" required aria-label="saleprice" aria-describedby="basic-addon1">
+                                <input value="INV-{{$data['inv']}}" readonly="readonly" name="invoice_number" type="text" class="form-control" placeholder="INV-00002" required aria-label="saleprice" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div>
@@ -82,7 +82,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="new-item-item" >
                         <p>Items</p>
                         <div class="input-group">
@@ -114,7 +113,6 @@
                                 
                         </div>
                     </div>
-
                     <hr>
                     <div class="new-item-item" id="new-items-submits">
                         <div id="new-item-cancel">
