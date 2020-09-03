@@ -17,7 +17,7 @@ class CreateAccountsTable extends Migration
             $table->id();
             $table->string("acc_name");
             $table->string("acc_number");
-            $table->foreignId("currecy_id");
+            $table->foreignId("currency_id");
             $table->foreignId("user_id");
             $table->foreignId("currency_id")->references("id")->on("currencies");
             $table->foreign("user_id")->references("id")->on("users");

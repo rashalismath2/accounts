@@ -94,9 +94,9 @@
                             <p>Recurring</p>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="oi oi-dollar input-group-text"></span>
+                                    
                                 </div>
-                                <input name="rev_recurring" type="text" class="form-control" placeholder="No / Daily / Weekly / Monthly /Yearly" required aria-label="purchaseprice" aria-describedby="basic-addon1">
+                                <input name="rev_recurring" type="text" class="form-control" placeholder="No / Daily / Weekly / Monthly /Yearly" aria-label="purchaseprice" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>
