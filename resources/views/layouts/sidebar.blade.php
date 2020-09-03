@@ -11,7 +11,11 @@
             <li id="sidebar-sales-btn" class="<?php 
                        $route = Route::current();
                         $name = $route->getName();
-                        $cond=($name=== 'invoices' || $name=== 'create_invoice' || $name=== 'revenues');
+                        $cond=($name=== 'invoices' || $name=== 'create_invoice' 
+                        || $name=== 'revenues' || $name==="create_revenue"
+                        || $name==="customers" || $name==="create_customer"
+                        );
+
                     if($cond){echo 'active';} ?>">
                     <span class="oi oi-credit-card font-white"></span>
                     <p>Sales</p> <span class="oi oi-chevron-bottom font-white"></span>
@@ -22,7 +26,7 @@
                 id="sidebar-sales-items">
                     <a href="{{route('invoices')}}"><p class="<?php if($cond){echo 'side-sel';}  ?>">Invoices</P></a>
                     <a href="{{route('revenues')}}"><p class="<?php if($cond){echo 'side-sel';}  ?>">Revenues</P></a>
-                    <p>Customers</P>
+                    <a href="{{route('customers')}}"><p class="<?php if($cond){echo 'side-sel';}  ?>">Customers</P></a>
             </div>
             <li><span class="oi oi-cart font-white"></span><p>Purchase</P></li>
             <li><span class="oi oi-briefcase font-white"></span><p>Banking</P></li>

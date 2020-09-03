@@ -25,3 +25,8 @@ Route::post('/invoices/create',"InvoiceController@CreateNew")->name("save_invoic
 Route::get('/revenues',"RevenueController@index")->name("revenues");
 Route::get('/revenues/create',"RevenueController@ShowCreate")->name("create_revenue");
 Route::post('/revenues/create',"RevenueController@CreateNew")->name("save_revenue");
+
+//Sales- Customers
+Route::get('/customers',"CustomerController@index")->name("customers");
+Route::get('/customers/create',"CustomerController@ShowCreate")->name("create_customer");
+Route::post('/customers/create',"CustomerController@CreateNew")->name("save_customer");
