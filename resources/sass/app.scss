@@ -499,6 +499,13 @@ section#items-results-table p,.items-records-action {
     margin-left: 10px !important;
 }
 
+.items-records-name{
+    cursor: pointer;
+}
+#items-results-table tr:hover{
+    background: #e2e4ef;
+}
+
 
 span.items-records-action.oi.oi-ellipses:hover {
     font-size: 18px;

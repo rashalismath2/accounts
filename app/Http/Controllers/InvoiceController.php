@@ -19,9 +19,9 @@ class InvoiceController extends Controller
     }
     public function ShowCreate(Request $request){
         $invoice=Invoice::latest()->first();
-        $customers=Customer::all();
-        $currencies=Currency::all();
-        $items=Item::all();
+        $customers=Customer::where("user_id",auth()->user()->id)->get();
+        $currencies=Currency::where("user_id",auth()->user()-id)->get();
+        $items=Item::where("user_id",ath()->user()->id)->get();
         $data=array("items"=>$items,"inv"=>($invoice->id)+1,"customers"=>$customers,"currencies"=>$currencies);
         return view("layouts.Invoices.create")->with("data",$data);
     }
@@ -35,8 +35,8 @@ class InvoiceController extends Controller
             'currency_id' => 'required'
         ]);
 
-        $cus=Customer::where("name",$request->customer_id)->first();
-        $cur=Currency::where("name",$request->currency_id)->first();
+        $cus=Customer::where("name",$request->customer_id)->where("user_id",auth()->user()->id)->first();
+        $cur=Currency::where("name",$request->currency_id)->where("user_id",auth()->user()->id)->first();
 
         $invoice=new Invoice();
         $invoice->invoice_date=$request->invoice_date;

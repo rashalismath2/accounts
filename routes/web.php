@@ -20,3 +20,8 @@ Route::delete('/items/delete', 'ItemController@delete')->name('delete_item');
 Route::get('/invoices',"InvoiceController@index")->name("invoices");
 Route::get('/invoices/create',"InvoiceController@ShowCreate")->name("create_invoice");
 Route::post('/invoices/create',"InvoiceController@CreateNew")->name("save_invoice_item");
+
+//Sales- Revenues
+Route::get('/revenues',"RevenueController@index")->name("revenues");
+Route::get('/revenues/create',"RevenueController@ShowCreate")->name("create_revenue");
+Route::post('/revenues/create',"RevenueController@CreateNew")->name("save_revenue");

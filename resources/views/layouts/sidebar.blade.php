@@ -11,7 +11,7 @@
             <li id="sidebar-sales-btn" class="<?php 
                        $route = Route::current();
                         $name = $route->getName();
-                        $cond=($name=== 'invoices' || $name=== 'create_invoice' || $name=== 'inv');
+                        $cond=($name=== 'invoices' || $name=== 'create_invoice' || $name=== 'revenues');
                     if($cond){echo 'active';} ?>">
                     <span class="oi oi-credit-card font-white"></span>
                     <p>Sales</p> <span class="oi oi-chevron-bottom font-white"></span>
@@ -21,7 +21,7 @@
                     ?>" 
                 id="sidebar-sales-items">
                     <a href="{{route('invoices')}}"><p class="<?php if($cond){echo 'side-sel';}  ?>">Invoices</P></a>
-                    <p>Revenues</P>
+                    <a href="{{route('revenues')}}"><p class="<?php if($cond){echo 'side-sel';}  ?>">Revenues</P></a>
                     <p>Customers</P>
             </div>
             <li><span class="oi oi-cart font-white"></span><p>Purchase</P></li>
