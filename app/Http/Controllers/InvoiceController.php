@@ -10,23 +10,62 @@ use App\Customer;
 use App\Currency;
 use App\Item;
 
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Support\MessageBag;
 
 class InvoiceController extends Controller
 {
     public function index(Request $request){
-        return view("invoice");
+
+        $invoices=DB::table('invoices')
+        ->join("customers","invoices.customer_id","=","customers.id")
+        ->join("invoice_items","invoices.id","=","invoice_items.invoice_id")
+        ->join('items', function ($join) {
+            $join->on('invoice_items.item_id', '=', 'items.id')
+                 ->where('items.user_id',auth()->user()->id);
+        })
+        ->select('invoices.*','customers.name')
+        ->get();
+        return view("invoice")->with("invoices",$invoices);
     }
     public function ShowCreate(Request $request){
         $invoice=Invoice::latest()->first();
         $customers=Customer::where("user_id",auth()->user()->id)->get();
-        $currencies=Currency::where("user_id",auth()->user()-id)->get();
-        $items=Item::where("user_id",ath()->user()->id)->get();
-        $data=array("items"=>$items,"inv"=>($invoice->id)+1,"customers"=>$customers,"currencies"=>$currencies);
+        $currencies=Currency::where("user_id",auth()->user()->id)->get();
+        $items=Item::where("user_id",auth()->user()->id)->get();
+        $data=array("items"=>$items,"inv"=>($invoice)!=null?($invoice->id)+1:1,"customers"=>$customers,"currencies"=>$currencies);
         return view("layouts.Invoices.create")->with("data",$data);
     }
+
+    public function Edit(Request $request,$id){
+        $invoices=DB::table('invoices')
+        ->where("invoices.id",'=',$id)
+        ->join("customers","invoices.customer_id","=","customers.id")
+        ->join("invoice_items","invoices.id","=","invoice_items.invoice_id")
+        ->join("currencies","invoices.currency_id","=","currencies.id")
+        ->join('items', function ($join) {
+            $join->on('invoice_items.item_id', '=', 'items.id')
+                 ->where('items.user_id',auth()->user()->id);
+        })
+        ->get();
+
+        $items=DB::table('items')
+                ->where("items.user_id",auth()->user()->id)
+                ->join("invoice_items","invoice_items.item_id","=","items.id")
+                ->where("invoice_items.invoice_id",$id)
+                ->get();
+
+        $customers=Customer::where("user_id",auth()->user()->id)->get();
+        $currencies=Currency::where("user_id",auth()->user()->id)->get();
+        $data=array("items"=>$items,"invoices"=>$invoices->first(),"customers"=>$customers,"currencies"=>$currencies);
+        // return $data;
+        return view("layouts.Invoices.edit")->with("data",$data);
+    }
+
     public function CreateNew(Request $request,MessageBag $message_bag){
-        
+
         $validatedData = $request->validate([
             'invoice_date' => 'required|date',
             'due_date' => 'required|date',
@@ -61,6 +100,7 @@ class InvoiceController extends Controller
         //save all the items in items_invocie table
         $all=$request->all();
         $found=false;
+        $total=0;
         foreach ($all as $key => $item) {
             if(substr($key,0,4)==="item"){
                 $found=true;
@@ -74,6 +114,11 @@ class InvoiceController extends Controller
                     $message_bag->add('item', 'Item was not found');
                     return redirect()->route("create_invoice")->withErrors($message_bag);
                 }
+                // calculate total to save in invocie table
+                $total=$total+($request->qty)*$request->price;
+                $invoice->amount=$total;
+                $invoice->save();
+
                 $newarr=array(
                     "item_id"=>$itemInDb->id,
                     "invoice_id"=>$invoice->id,

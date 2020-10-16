@@ -10995,13 +10995,12 @@ nav .nav-link {
 
 #side-bar {
   width: 280px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   background: #3C3F72;
 }
 
 #dashboard {
+  height: 100%;
   background: #F8F9FE;
   width: 100%;
 }
@@ -11437,6 +11436,16 @@ nav .nav-link {
   height: 40px;
 }
 
+.item-record-name {
+  display: inline;
+}
+
+.item-record-name button {
+  border: 0;
+  background: 0;
+  font-weight: bold;
+}
+
 section#items-results-table p,
 .items-records-action {
   margin: 0;
@@ -11488,5 +11497,9 @@ span.items-records-action.oi.oi-ellipses:hover {
 
 .new-item-inline > div {
   width: 48%;
+}
+
+#invoice_total input {
+  border: 0;
 }
 

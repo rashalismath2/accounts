@@ -8,13 +8,13 @@
 
 var total=0;
 function updateTotal(val,id){
+    
     id.lastElementChild.textContent="$"+val
     total=total+parseInt(val);
     var elSub=document.getElementById("invoice_sub_total")
     var elTotal=document.getElementById("invoice_total")
-
     elSub.textContent="$"+total
-    elTotal.textContent="$"+total
+    elTotal.firstElementChild.value="$"+total
 }
 
 // invoice table add button

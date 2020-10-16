@@ -19,7 +19,13 @@
                   <tr>
                     <th>
                         <img class="item-records-image" src="{{asset('storage/items/'.$item->sale_pic_id)}}" alt="" srcset="">
-                        <p class="items-records-name">{{$item->item_name}}</p>
+                        <p class="items-records-name">
+                            <form class="item-record-name" method="POST" action="{{ route('edit_item') }}">
+                                <input type="text" value="{{$item->id}}" hidden name="item" />
+                                @csrf
+                                <button type="submit">{{$item->item_name}}</button>
+                            </form>
+
                     </th>
                     <td><p class="items-records-price">${{$item->sale_price}}</p></td>
                     <td><p class="items-records-price">${{$item->purchase_price}}</p></td>
