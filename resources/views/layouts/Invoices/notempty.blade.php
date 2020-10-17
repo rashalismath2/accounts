@@ -20,8 +20,7 @@
                   <tr>
                     <th>
                         <p class="items-records-name">
-                            <form class="item-record-name" method="GET" action="/invoices/{{$invoice->id}}">
-                                        //TODO- send to invoice details page
+                            <form class="item-record-name" method="GET" action="/invoices/details/{{$invoice->invoice_number}}">
                                 <button type="submit">{{$invoice->invoice_number}}</button>
                             </form>
 

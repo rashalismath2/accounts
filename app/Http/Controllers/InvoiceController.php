@@ -30,6 +30,33 @@ class InvoiceController extends Controller
         ->get();
         return view("invoice")->with("invoices",$invoices);
     }
+
+    public function details(Request $request,$id){
+
+        $invoices=DB::table('invoices')
+        ->where("invoices.invoice_number",'=',$id)
+        ->join("customers","invoices.customer_id","=","customers.id")
+        ->join("invoice_items","invoices.id","=","invoice_items.invoice_id")
+        ->join('items', function ($join) {
+            $join->on('invoice_items.item_id', '=', 'items.id')
+                 ->where('items.user_id',auth()->user()->id);
+        })
+        ->select("invoices.*","customers.*")
+        ->get();
+
+        $items=DB::table('items')
+                ->where("items.user_id",auth()->user()->id)
+                ->join("invoice_items","invoice_items.item_id","=","items.id")
+                ->join("invoices","invoices.id","=","invoice_items.invoice_id")
+                ->where("invoices.invoice_number",$id)
+                ->select("items.*","invoice_items.*")
+                ->get();
+
+        $data=array("items"=>$items,"invoices"=>$invoices->first());
+        // return $data;
+        return view("layouts.Invoices.details")->with("data",$data);
+    }
+
     public function ShowCreate(Request $request){
         $invoice=Invoice::latest()->first();
         $customers=Customer::where("user_id",auth()->user()->id)->get();

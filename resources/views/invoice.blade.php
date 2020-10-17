@@ -4,6 +4,7 @@
 
     <div id="items-cont">
         @include('layouts.Invoices.header')
+        
         @if (count($invoices)>0)
             @include('layouts.Invoices.notempty')
         @else

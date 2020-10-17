@@ -1,7 +1,7 @@
 <div id="sidebar-cont">
     <div id="company-name-cont">
         <img src="{{asset('Images/logo.svg')}}" alt="" srcset="">
-        <p>bloomingal</p>
+        <p>{{auth()->user()->company_name}}</p> 
         <span class="oi oi-caret-bottom font-white"></span>
     </div>
     <div id="sidebar-items-cont">

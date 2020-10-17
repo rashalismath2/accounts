@@ -11,7 +11,7 @@
     <tbody id="invoice-table-body">
       @if ($data["items"])
       <tr>
-        //TODO- update total in js, send delete query via ajax
+        
           @foreach ($data["items"] as $item)
             <td ><button onclick='invoiceDeleteBtn("+row.id+")' type='button' class='btn btn-danger'><span class='oi oi-trash'></span></button></td>
             <td>  <input value="{{$item->item_name}}" required name='item"+invoiceTableItems+"' type='text' class='form-control' placeholder='Item' /></td>

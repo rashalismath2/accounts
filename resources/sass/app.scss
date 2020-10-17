@@ -558,3 +558,229 @@ span.items-records-action.oi.oi-ellipses:hover {
 #invoice_total input{
     border:0;
 }
+
+#invoice-details-cont>p{
+    width: fit-content;
+    font-size: 1.5rem;
+    color: $mainBlue;
+    display: inline;
+    font-weight: bold;
+}
+#invoice-details-cont::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.invoice-details-status{
+    margin-top: 25px;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+.invoice-details-status>div:first-child{
+    padding: 15px 35px 0 0;
+}
+.invoice-details-status>div{
+    padding: 35px 35px 0 0;
+}
+
+.image-invoice-details{
+    width: 35px;
+    display: inline;
+    float: left;
+    height: 35px;
+    border-radius: 50%;
+}
+.image-invoice-details>span{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 25%;
+}
+.details-invoice-details{
+    display: inline-block;
+    margin-left: 18px;
+}
+.send-invoice-details{
+    display: inline-block;
+    margin-left: 18px;
+}
+.get-paid-invoice-details{
+    display: inline-block;
+    margin-left: 18px;
+}
+
+#edit-invoice-details  .image-invoice-details{
+    background: $mainBlue;
+}
+#send-invoice-details .image-invoice-details{
+    background: #EF3232;
+}
+#get-paid-invoice-details .image-invoice-details{
+    background: #6DA252;
+}
+.invoice-details-header{
+    color: $mainBlue;
+    font-size: 1.2rem;
+}
+
+#edit-invoice-details-button{
+    border: 0;
+    background: $mainBlue;
+    color: white;
+    border-radius: 5px;
+}
+
+#mark-sent-invoice-details-button{
+    border: 0;
+    background: white;
+    border: 1px solid;
+    color: black;
+    border-radius: 5px;
+}
+#send-email-invoice-details-button{
+    border: 0;
+    background: #EF3232;
+    color: white;
+    border-radius: 5px;
+}
+#mark-paid-invoice-details-button{
+    border: 0;
+    background: white;
+    border: 1px solid;
+    color: black;
+    border-radius: 5px;
+}
+#add-payment-invoice-details-button{
+    border: 0;
+    background: #6DA252;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.btn-shadow{
+    -webkit-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+
+}
+
+.invoice-details-darft{
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.draft-table-head{
+    color: $mainBlue;
+}
+
+.invoice-details-draft-cont{
+    margin-top:35px;
+}
+.invoice-details-draft-header-draft{
+    display: flex;
+    justify-content: flex-end;
+    height: 45px;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(116,118,160,1) 57%, rgba(116,118,160,1) 100%);
+
+}
+.invoice-details-draft-header-draft p{
+    align-items: flex-end;
+    text-align: right;
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.invoice-details-draft-customer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.draft-customer-img{
+    background:$mainBlue;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+}
+.draft-customer-img span{
+    padding: 22px;
+}
+
+.draft-customer-img span::before{
+    color:white;
+    font-size: 4rem;
+}
+
+.draft-customer-details{
+    width:300px;
+}
+.draft-customer-details p{
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.invoice-details-draft-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.draft-invoice-details{
+    list-style: none;
+    width:300px;
+    padding:0;
+}
+.draft-invoice-details-details {
+    display: flex;
+    justify-content: space-between;
+}
+.draft-invoice-details-details p{
+    display: inline;
+}
+.draft-invoice-details-details p:first-child{
+    font-weight: bold;
+}
+.draft-invoice-customer-details{
+    font-size: 1rem;
+}
+.draft-invoice-customer-name span{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.invoice-draft-total-border{
+    border-bottom: 1px solid;
+}
+
+.draft-details-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.draft-details-buttons button {
+    border: 0;
+    padding:9px;
+    color:white;
+    margin-left: 15px;
+    border-radius: 6px;
+}
+.draft-details-buttons button a{
+    color: white;
+    text-decoration: none;
+}
+
+.draft-edit{
+    background: #328aef;
+}
+.draft-print{
+    background: $btnGreen;
+}
+.draft-more{
+    background: $mainBlue;
+}

@@ -18,6 +18,7 @@ Route::delete('/items/delete', 'ItemController@delete')->name('delete_item');
 
 // Sales- Invoices
 Route::get('/invoices',"InvoiceController@index")->name("invoices");
+Route::get('/invoices/details/{id}', 'InvoiceController@details')->name('invoice-details');
 Route::get('/invoices/create',"InvoiceController@ShowCreate")->name("create_invoice");
 Route::get('/invoices/{id}', 'InvoiceController@edit')->name('edit_invoices');
 Route::post('/invoices/create',"InvoiceController@CreateNew")->name("save_invoice_item");
