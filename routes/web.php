@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 
-Auth::routes();
+Route::view('/login', 'auth.login');
+Route::post('/login',"Logincontroller@login")->name("login");
+Route::post('/logout',"Logincontroller@logout")->name("logout");
+
+
 
 Route::get('/', 'HomeController@index')->name('home');
 
