@@ -77,7 +77,7 @@
               </table>
         </div>
         <hr />
-
+        //TODO- delete invoice, print invoice
         <div class="draft-details-buttons">
             <button class="btn-shadow draft-edit"><span class="oi oi-pencil"></span> <a href="/invoices/{{$data["items"][0]->invoice_id}}">Edit</a></button>
             <button class="btn-shadow draft-print"><span class="oi oi-print"></span> Print</button>

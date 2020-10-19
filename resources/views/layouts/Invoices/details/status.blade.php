@@ -11,6 +11,7 @@
             </div>
         </div>
     </div>
+    //TODO-operations in this page
     <div id="send-invoice-details">
         <div class="image-invoice-details"><span class="oi oi-envelope-closed font-white"></span></div>
         <div class="details-invoice-details">

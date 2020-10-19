@@ -9,7 +9,7 @@
         <div id="new-items-desc-cont">
             <div id="new-items-inputs">
                 @include('layouts.error')
-                    
+                //TODO- operations in this page
                 <form action="{{route('save_invoice_item')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="new-item-item new-item-inline">
