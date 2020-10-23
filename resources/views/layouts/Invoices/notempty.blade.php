@@ -17,7 +17,7 @@
                 </thead>
                 <tbody>
                   @foreach ($invoices as $invoice)
-                  <tr>
+                  <tr id="invoice-{{$invoice->id}}">
                     <th>
                         <p class="items-records-name">
                             <form class="item-record-name" method="GET" action="/invoices/details/{{$invoice->invoice_number}}">
@@ -25,35 +25,28 @@
                             </form>
 
                     </th>
-                    <td><p class="font-weight-bold">{{$invoice->name}}</p></td>
+                    <td><p class="font-weight-bold">{{$invoice->customers->name}}</p></td>
                     <td><p class="">${{$invoice->amount}}</p></td>
                     <td><p class="items-records-price">{{$invoice->invoice_date}}</p></td>
                     <td><p class="items-records-price">{{$invoice->due_date}}</p></td>
-                    <td><p class="badge badge-danger ">Sent</p></td>
+                    <td><p class="badge badge-danger ">{{$invoice->isSent}}</p></td>
                     <td class="items-action-row">
-                        <span class="items-records-action oi oi-ellipses"></span>
-                        <div class="item-action-drop items-actions">
-                            <div class="dash-drop-op-list-item">
-                                <span class="oi oi-pencil"></span>
-                                <form  method="GET" action="/invoices/{{$invoice->id}}">
-                                    <button type="submit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="dash-drop-op-list-item">
-                                <span class="oi oi-trash"></span>
-                                <form  method="GET" action="/invoices/{{$invoice->id}}">
-                                    <input type="text" value="{{$invoice->id}}" hidden name="item" />
-                                    @method("DELETE")
-                                    @csrf
-                                    <button>Delete</button>
-                                </form>
-                            </div>
-                        </div>
+                      <div class="btn-group dropleft">
+                          <span type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></span>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/invoices/{{$invoice->id}}">Edit</a>
+                            <a onclick="deleteInvoice({{$invoice->id}})" id="delete-invoice" class="dropdown-item" >Delete</a>
+                          </div>
+                      </div>
+                      <div id="spinner-{{$invoice->id}}" class="" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
                     </td>
                   </tr>
                   @endforeach
                 </tbody>
               </table>
         </section>
+        <script src="{{asset('js/invoices/index.js')}}"></script>
     </div>
 </div>

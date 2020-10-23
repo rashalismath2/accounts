@@ -11755,3 +11755,7 @@ span.items-records-action.oi.oi-ellipses:hover {
   background: #7476A0;
 }
 
+.spinner-border .sr-only {
+  color: #7476A0;
+}
+

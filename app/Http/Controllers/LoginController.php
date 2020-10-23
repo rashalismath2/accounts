@@ -31,6 +31,7 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         
         if (Auth::attempt($credentials)) {
+            $user=User::where("email",$request->email)->first();
             Cookie::queue('api_token', $user->createToken("Auth token")->accessToken,30);
             
             return redirect()->route("home");

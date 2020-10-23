@@ -26,6 +26,7 @@ Route::get('/invoices/details/{id}', 'InvoiceController@details')->name('invoice
 Route::get('/invoices/create',"InvoiceController@ShowCreate")->name("create_invoice");
 Route::get('/invoices/{id}', 'InvoiceController@edit')->name('edit_invoices');
 Route::post('/invoices/create',"InvoiceController@CreateNew")->name("save_invoice_item");
+Route::put('/invoices/',"InvoiceController@update")->name("update_invoice");
 
 //Sales- Revenues
 Route::get('/revenues',"RevenueController@index")->name("revenues");

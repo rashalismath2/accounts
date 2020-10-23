@@ -34,7 +34,7 @@
                                 </div>
                                 <select name="currency_id" class="form-control custom-select" id="inputGroupSelect03">
                                     @foreach ($data["currencies"] as $cur)
-                                        <option >{{$cur->name}}</option>
+                                        <option >{{$cur->currency_name}}</option>
                                     @endforeach
                                   </select>
                             </div>

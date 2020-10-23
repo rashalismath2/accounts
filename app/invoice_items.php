@@ -13,4 +13,8 @@ class invoice_items extends Pivot
     {
         return $this->hasMany('App\invoice', 'id', 'invoice_id');
     }
+    public function items()
+    {
+        return $this->hasMany('App\item', 'id', 'item_id');
+    }
 }

@@ -9,9 +9,9 @@
         <div id="new-items-desc-cont">
             <div id="new-items-inputs">
                 @include('layouts.error')
-                //TODO- operations in this page
-                <form action="{{route('save_invoice_item')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('update_invoice')}}" method="post" enctype="multipart/form-data">
                     @csrf
+                    @method("PUT")
                     <div class="new-item-item new-item-inline">
                         <div>
                             <p>Customer<span class="new-items-required-fields">*</span></p>
