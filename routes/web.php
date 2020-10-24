@@ -32,6 +32,8 @@ Route::put('/invoices/',"InvoiceController@update")->name("update_invoice");
 Route::get('/revenues',"RevenueController@index")->name("revenues");
 Route::get('/revenues/create',"RevenueController@ShowCreate")->name("create_revenue");
 Route::post('/revenues/create',"RevenueController@CreateNew")->name("save_revenue");
+Route::get('/revenues/{id}', 'RevenueController@edit')->name('edit_revenue');
+Route::put('/revenues/{id}',"RevenueController@update")->name("update_revenue");
 
 //Sales- Customers
 Route::get('/customers',"CustomerController@index")->name("customers");

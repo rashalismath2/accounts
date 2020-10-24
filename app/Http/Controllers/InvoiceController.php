@@ -24,9 +24,11 @@ class InvoiceController extends Controller
 
     public function index(Request $request){
 
-        $invoices=Invoice::with("items")
+        $invoices=Invoice::with(["items"=>function($query){
+            $query->where("user_id",auth()->user()->id);
+        }])
                     ->with("customers")
-        ->get();
+                    ->get();
         // return $invoices;
         return view("invoice")->with("invoices",$invoices);
     }
