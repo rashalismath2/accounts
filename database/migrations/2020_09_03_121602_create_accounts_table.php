@@ -19,7 +19,7 @@ class CreateAccountsTable extends Migration
             $table->string("acc_number");
             $table->foreignId("currency_id");
             $table->foreignId("user_id");
-            $table->foreignId("currency_id")->references("id")->on("currencies");
+            $table->foreign("currency_id")->references("id")->on("currencies");
             $table->foreign("user_id")->references("id")->on("users");
             $table->float("opening_balance");
             $table->timestamps();
