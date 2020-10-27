@@ -11759,3 +11759,150 @@ span.items-records-action.oi.oi-ellipses:hover {
   color: #7476A0;
 }
 
+#dashboard-header {
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dashboard-title {
+  display: inherit;
+}
+
+#dashboard-title .dropdown {
+  padding-top: 5px;
+}
+
+#dashboard-title .dropdown .oi-menu::before {
+  color: #7476A0;
+}
+
+#dashboard-title p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 8px;
+  color: #7476A0;
+}
+
+#dashboard-date {
+  border: 1px #7476A0 solid;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: white;
+}
+
+#dashboard-date input {
+  border: 0;
+  background: white;
+  padding: 3px;
+}
+
+#dashboard-items {
+  padding: 24px;
+}
+
+.dashboard-item {
+  margin-right: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+#dashboard-items-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.width-twenty {
+  width: 20%;
+}
+
+.width-thirty {
+  width: 35%;
+}
+
+.widget-item-header {
+  display: inline;
+  float: left;
+}
+
+.widget-item-icon {
+  display: inline;
+  float: right;
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.widget-item-icon span {
+  font-size: 2rem;
+  padding: 5px;
+}
+
+.widget-item-header p:first-child {
+  font-weight: bold;
+}
+
+.widget-item-header p {
+  margin: 0;
+}
+
+.dashboard-item-color-blue {
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #348bef 0%, #63adfd 100%);
+}
+
+.dashboard-item-color-blue .oi {
+  color: #348bef;
+}
+
+.dashboard-item-color-red {
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #f03434 0%, #fd6464 100%);
+}
+
+.dashboard-item-color-red .oi {
+  color: #f03434;
+}
+
+.dashboard-item-color-green {
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #6ea354 0%, #b6d2a6 100%);
+}
+
+.dashboard-item-color-green .oi {
+  color: #6ea354;
+}
+
+.dashboard-item .oi-menu {
+  color: white;
+}
+
+.dashboard-item-details {
+  background: white;
+  padding: 0;
+}
+
+.dashboard-item-details-header {
+  padding: 10px;
+}
+
+.dashboard-item-details .dropdown span {
+  color: #7476A0;
+}
+
+.dashboard-item-details-name {
+  color: #7476A0;
+  font-weight: bold;
+}
+

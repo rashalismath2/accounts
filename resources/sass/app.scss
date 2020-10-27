@@ -788,3 +788,133 @@ box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
 .spinner-border .sr-only{
     color:$mainBlue;
 }
+
+// dashboard
+#dashboard-header{
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dashboard-title{
+    display:inherit;
+}
+#dashboard-title .dropdown{
+    padding-top: 5px;
+}
+#dashboard-title .dropdown .oi-menu::before{
+    color: $mainBlue;
+}
+#dashboard-title p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 8px;
+    color:$mainBlue;
+}
+#dashboard-date {
+    border: 1px $mainBlue solid;
+    height: fit-content;
+    background: white;
+}
+#dashboard-date input{
+    border: 0;
+    background: white;
+    padding:3px;
+}
+#dashboard-items{
+    padding:24px;
+}
+.dashboard-item{
+    margin-right:25px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    color:white;
+    margin-bottom: 25px;
+}
+.dashboard-item-total{
+
+}
+
+#dashboard-items-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+.width-full{
+    width:100%;
+}
+.width-twenty{
+    width:20%;
+}
+.width-thirty{
+    width:35%;
+}
+
+.widget-item-header{
+    display: inline;
+    float:left;
+}
+.widget-item-icon{
+    display: inline;
+    float:right;
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+    
+}
+.widget-item-icon span{
+    font-size: 2rem;
+    padding: 5px;
+}
+.widget-item-header p:first-child{
+    font-weight: bold;
+}
+.widget-item-header p{
+    margin:0;
+}
+.dashboard-item-color-blue{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,139,239,1) 0%, rgba(99,173,253,1) 100%);
+}
+.dashboard-item-color-blue .oi{
+    color:rgba(52,139,239,1);
+}
+
+
+.dashboard-item-color-red{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,52,52,1) 0%, rgba(253,100,100,1) 100%);
+}
+.dashboard-item-color-red .oi{
+    color:rgba(240,52,52,1);
+}
+
+.dashboard-item-color-green{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,163,84,1) 0%, rgba(182,210,166,1) 100%);
+}
+
+.dashboard-item-color-green .oi{
+    color: rgba(110,163,84,1);
+}
+.dashboard-item .oi-menu{
+    color: white;
+}
+
+.dashboard-item-details{
+    background:white;
+    padding: 0;
+}
+.dashboard-item-details-header{
+    padding:10px;
+}
+
+.dashboard-item-details .dropdown span{
+    color: $mainBlue;
+}
+
+.dashboard-item-details-name{
+    color:$mainBlue;
+    font-weight: bold;
+}

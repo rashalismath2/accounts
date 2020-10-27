@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  
 Route::delete("/invoice","API\InvoiceController@deleteInvoiceById");
 Route::delete("/revenue","API\RevenueController@deleteRevenueById");
+Route::get("/widgets","API\WidgetController@index");
+Route::put("/widgets","API\WidgetController@update");

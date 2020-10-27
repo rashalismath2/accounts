@@ -28,7 +28,8 @@ class AddBillIdAndQtyColumnToItemsTable extends Migration
     public function down()
     {
         Schema::table('items', function (Blueprint $table) {
-            //
+            $table->dropColumn("qty");
+            $table->dropColumn("bill_id");
         });
     }
 }

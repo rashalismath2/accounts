@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/login', 'auth.login');
+Route::view('/login', 'auth.login')->name("login-view");
 Route::post('/login',"Logincontroller@login")->name("login");
+// Route::get('/logout',"Logincontroller@logout")->name("logout");
 Route::post('/logout',"Logincontroller@logout")->name("logout");
 
 

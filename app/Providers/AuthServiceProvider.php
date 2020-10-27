@@ -26,9 +26,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
+        
         Passport::routes();
-
+        // Passport::cookie('api_token');
         Passport::personalAccessClientId(
             config('passport.personal_access_client.id')
         );
@@ -36,5 +36,6 @@ class AuthServiceProvider extends ServiceProvider
         Passport::personalAccessClientSecret(
             config('passport.personal_access_client.secret')
         );
+        
     }
 }
